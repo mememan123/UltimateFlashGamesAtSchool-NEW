@@ -155,12 +155,21 @@
 <p style="text-align: center;"><span style="font-size: large;">Domo Dance</span></p>
 <p>&nbsp;</p>
 <p>
-<center>	
-<object type="application/x-shockwave-flash" 
-  data="domo_dance.swf" 
-  width="550" height="400">
-  <param name="movie" value="domo_dance.swf" />
-  <param name="quality" value="high"/>
+<center>
+	<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("domo_dance.swf");
+	player.style.width = "550px";
+        player.style.height = "400px";
+	     });
+</script>
+<script src="ruffle.js"></script>
+</script>
 </object>
 </center>	
 </p>
@@ -11407,6 +11416,5 @@ function WebAudioTinySynth(opt){
 }})()
 /// end: [code injected by MIDI Player browser extension]
 
-	<script src="ruffle.js"></script>
 	
 </script></html>
