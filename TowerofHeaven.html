@@ -5,16 +5,9 @@
 	text-align: center;
 <center>
 <script>
-window.RufflePlayer = window.RufflePlayer || {};
-window.addEventListener("load", (event) => {
-const ruffle = window.RufflePlayer.newest();
-const player = ruffle.createPlayer();
-const container = document.getElementById("container");
-container.appendChild(player);
-player.load("domo_dance.swf");
-player.style.width = "550px";
-player.style.height = "400px";
-	     });
-</script>
-<script src="ruffle.js"></script>
-AddType application/wasm efc14228496c8e59e06d.wasm
+player.load({
+    url: "https://supersonicrainboom.github.io/ultimate-flash-games-at-school/domo_dance.swf",
+    parameters: "", // Also known as "flashvars", this is a string indicating values that may be passed to and loaded by the movie (e.g. "key1=value1&key2=value2").
+    allowScriptAccess: false, // A boolean indicating whether the file is allowed to interact with the page through JavaScript.
+});
+
