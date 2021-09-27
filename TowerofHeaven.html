@@ -1,13 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0053)http://www.geocities.ws/nkenny2005/FLASH%20GAMES.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
-.style1 {
-	text-align: center;
-<center>
 <script>
-player.load({
-    url: "https://supersonicrainboom.github.io/ultimate-flash-games-at-school/domo_dance.swf",
-    parameters: "", // Also known as "flashvars", this is a string indicating values that may be passed to and loaded by the movie (e.g. "key1=value1&key2=value2").
-    allowScriptAccess: false, // A boolean indicating whether the file is allowed to interact with the page through JavaScript.
-});
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("domo_dance.swf");
+        player.style.width = "600px";
+	player.style.height = "400px";
+    });
+</script>
+<script src="https://supersonicrainboom.github.io/ultimate-flash-games-at-school/ruffle.js"></script>
+
 
